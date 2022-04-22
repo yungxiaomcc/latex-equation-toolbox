@@ -94,7 +94,9 @@ class InputField extends React.Component<Props> {
             }
           }}
           latex={this.props.latex} // Initial latex value for the input field
-          onChange={latex => {
+          onChange={mathField => {
+            const latex=mathField.latex()
+            
             if (latex.trim() !== this.props.latex.trim()) {
               this.props.changeLatex(latex)
             }
